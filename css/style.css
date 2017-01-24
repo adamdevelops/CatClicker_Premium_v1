@@ -20,12 +20,11 @@
   float: right;
   position: absolute;
   height: 300px;
-  width: 300px;
+  width: 100%;
 }
 
 #cat1 {
   float: right;
-  position: absolute;
   height: 300px;
   width: 300px;
 }
