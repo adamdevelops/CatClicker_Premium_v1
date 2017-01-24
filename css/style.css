@@ -1,12 +1,17 @@
+.app{
+
+}
+
 .cat_menu {
   float:left;
   padding: 10px;
   margin-right: 10px;
+  width: 50%;
+  border: 2px solid red;
 }
 
-.click-cat{
-  float: right;
-  position: absolute;
+.click-cat-area{
+
 }
 
 .cat-area{
@@ -18,7 +23,6 @@
 
 #cat-pic {
   float: right;
-  position: absolute;
   height: 300px;
   width: 100%;
 }
