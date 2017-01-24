@@ -5,10 +5,27 @@
 }
 
 .click-cat{
+  float: right;
+  position: absolute;
 }
 
-.cat1{
+.cat-area{
   float: right;
+  position: absolute;
+  height: 300px;
+  width: 300px;
+}
+
+#cat-pic {
+  float: right;
+  position: absolute;
+  height: 300px;
+  width: 300px;
+}
+
+#cat1 {
+  float: right;
+  position: absolute;
   height: 300px;
   width: 300px;
 }
