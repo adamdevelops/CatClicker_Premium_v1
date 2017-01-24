@@ -1,22 +1,22 @@
 var kittycats = [{
   name: "Xuxa",
-  picture: "/img/xuxa.jpg"
+  picture: "img/xuxa.jpg"
 },
 {
   name: "Chewie",
-  picture: "/img/chewie.jpg"
+  picture: "img/chewie.jpg"
 },
 {
   name: "Gato",
-  picture: "/img/gato.jpg"
+  picture: "img/gato.jpg"
 },
 {
   name: "Mittens",
-  picture: "/img/mittens.jpg"
+  picture: "img/mittens.jpg"
 },
 {
   name: "Fluffy",
-  picture: "/img/fluffy.jpg"
+  picture: "img/fluffy.jpg"
 }];
 
 
@@ -72,13 +72,17 @@ for (var i = 0; i < kittycats.length; i++) {
 
     // This is the number we're on...
     var cat = kittycats[i];
+    console.log(cat)
 
     // We're creating a DOM element for the number
+    document.getElementById("cat_menu").innerHTML = cat;
     var elem = document.createElement('li');
     elem.textContent = cat.name;
+    //
+
 
     // ... and when we click, alert the value of `num`
-    elem.addEventListener('click', (function(cat.name) {
+    elem.addEventListener('click', (function(numCopy) {
         return function() {
             alert(cat.name);
         };
