@@ -5,9 +5,14 @@
 }
 
 .click-cat{
-  float: right;
 }
 
 .cat1{
   float: right;
+  height: 300px;
+  width: 300px;
+}
+
+.counter{
+  float: left;
 }

@@ -67,26 +67,25 @@ var kittycats = [{
 //     document.body.appendChild(elem);
 // };
 
-
+// Event Listner of cat menu
 for (var i = 0; i < kittycats.length; i++) {
 
     // This is the number we're on...
     var cat = kittycats[i];
-    console.log(cat)
+    console.log(cat) //see what objects are stored in cat variable
 
-    // We're creating a DOM element for the number
-    document.getElementById("cat_menu").innerHTML = cat;
+    // We're creating a DOM element for the cat object
     var elem = document.createElement('li');
     elem.textContent = cat.name;
-    //
 
 
     // ... and when we click, alert the value of `num`
-    elem.addEventListener('click', (function(numCopy) {
+    elem.addEventListener('click', (function(catCopy) {
         return function() {
-            alert(cat.name);
+            alert(catCopy.name);
         };
     })(cat));
 
-    document.body.appendChild(elem);
+    //Append the list elements to the 'cat_menu' div
+    document.getElementById("cat_menu").appendChild(elem);
 };
