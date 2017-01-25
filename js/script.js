@@ -102,6 +102,8 @@ for (var i = 0; i < kittycats.length; i++) {
 
             clicked_cat = catCopy;
             console.log(clicked_cat);
+            var elem2 = document.getElementById("cat-pic").innerHTML = '<img id ="cat1" src="'+ catCopy.picture + '"></img>';
+
         };
     })(cat));
 
@@ -115,5 +117,4 @@ console.log("The clicked on cat is");
 console.log(clicked_cat);
 
 //Add cat's picture to Cat-pic div     --------------TESTING------------------------   style="position = absolute; TOP:35px; LEFT:170px; WIDTH:50px; HEIGHT:50px"
-var elem2 = document.getElementById("cat-pic").innerHTML = '<img id ="cat1" src="'+ kittycats[1].picture + '"></img>';
-document.getElementById("cat-pic").appendChild(elem2);
+//document.getElementById("cat-pic").appendChild(elem2);
