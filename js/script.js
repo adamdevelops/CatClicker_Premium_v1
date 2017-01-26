@@ -31,15 +31,7 @@ var kittycats = [{
 
 var count = 0;
 
-//Cat 1
-var counter_clicks = function() {
-  count += 1;
-  document.getElementById("counter").innerHTML = "This has been clicked " + count + " times.";
 
-};
-//
-// // Attach as a listener
-// document.getElementById("cat1").addEventListener("click", addUp1, false);
 //
 //
 // //Cat 2
@@ -80,7 +72,7 @@ var counter_clicks = function() {
 
 
 // Variable for clicked on cat within the cat menu
-var clicked_cat;
+var currentCat;
 
 // Event Listner for cat menu
 for (var i = 0; i < kittycats.length; i++) {
@@ -100,8 +92,10 @@ for (var i = 0; i < kittycats.length; i++) {
         return function() {
             alert(catCopy.name);
 
-            clicked_cat = catCopy;
-            console.log(clicked_cat);
+            currentCat = catCopy;
+            console.log(currentCat);
+            var catgreeting_elem = document.getElementById("cat-greeting").innerHTML = '<p>Say hi to '+ catCopy.name + '!</p>';
+            var pic_elem = document.getElementById("cat-pic").innerHTML = '<img id ="cat1" src="'+ catCopy.picture + '"></img>';
         };
     })(cat));
 
@@ -111,9 +105,18 @@ for (var i = 0; i < kittycats.length; i++) {
 
 };
 
-console.log("The clicked on cat is");
-console.log(clicked_cat);
+var count = 0;
+
+document.getElementById("cat-pic").addEventListener('click', (function(count) {
+  document.getElementById("counter").innerHTML = '';
+
+    return function() {
+      ++count;
+      console.log(count);
+      document.getElementById("counter").innerHTML = "Total number of clicks on all cats are " + count + " times.";
+    };
+})(count));
+
 
 //Add cat's picture to Cat-pic div     --------------TESTING------------------------   style="position = absolute; TOP:35px; LEFT:170px; WIDTH:50px; HEIGHT:50px"
-var elem2 = document.getElementById("cat-pic").innerHTML = '<img id ="cat1" src="'+ kittycats[1].picture + '"></img>';
-document.getElementById("cat-pic").appendChild(elem2);
+//document.getElementById("cat-pic").appendChild(elem2);
